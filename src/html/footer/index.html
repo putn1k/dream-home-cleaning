@@ -1,0 +1,36 @@
+<footer class="site__footer site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-xl-8 col-xxl-9">
+        <nav class="site-footer__services footer-services-nav">
+          <a class="title-md footer-services-nav__link"
+             href="page-services.html">Services</a>
+          @include('services-nav.html')
+        </nav>
+      </div>
+      <div class="col-12 col-xl-4 col-xxl-3">
+        <div class="site-footer__bottom">
+          <div class="site-footer__bottom-wrapper">
+            <div class="site-footer__logo">
+              <a href="page-main.html">
+                <picture>
+                  <img src="img/default/logo-light.png"
+                       width="108"
+                       height="23"
+                       alt="Dream Home Cleaning logo">
+                </picture>
+              </a>
+            </div>
+            <nav class="site-footer__site-nav footer-site-nav">
+              @include('site-nav.html')
+            </nav>
+          </div>
+          @include('../common/socials.html')
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+@include('../common/scroll-top.html')
+@include('../modal/index.html')

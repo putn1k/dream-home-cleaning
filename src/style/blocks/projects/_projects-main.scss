@@ -1,0 +1,49 @@
+.projects-main {
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__gallery-list {
+    margin-bottom: -40px;
+  }
+
+  &__gallery-item {
+    margin-bottom: 40px;
+  }
+
+  @include media-min ($md) {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 65px;
+
+    &__title {
+      margin-bottom: 60px;
+    }
+
+    &__gallery-list {
+      margin-bottom: -80px;
+    }
+
+    &__gallery-item {
+      margin-bottom: 80px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 80px;
+
+    &__gallery-list {
+      margin-bottom: -120px;
+    }
+
+    &__gallery-item {
+      margin-bottom: 120px;
+    }
+  }
+}

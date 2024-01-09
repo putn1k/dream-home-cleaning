@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @include('html/head/index.html')
+  <title>About Us</title>
+</head>
+
+<body class="indent-reset site">
+  <div aria-hidden="true"
+       id="site-top"></div>
+  <div class="site__container">
+    @include('html/header/index.html')
+    <div class="site__content">
+      @include('html/common/breadcrumbs.html', {title: 'About Us'})
+      <main>
+        @include('html/about/index.html')
+      </main>
+    </div>
+    @include('html/footer/index.html')
+  </div>
+  @include('html/common/scripts.html')
+</body>
+
+</html>

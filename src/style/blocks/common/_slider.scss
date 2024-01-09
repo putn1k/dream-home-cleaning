@@ -1,0 +1,15 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+
+  &__wrapper {
+    box-sizing: border-box;
+  }
+}
+
+.slider-controls-btn {
+  display: inline-flex;
+  border-radius: 50%;
+  pointer-events: auto;
+  overflow: hidden;
+}

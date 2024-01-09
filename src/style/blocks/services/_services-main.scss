@@ -1,0 +1,98 @@
+.services-main {
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__filters {
+    padding: 15px;
+    margin: -15px;
+    margin-bottom: 40px;
+    overflow-x: auto;
+    scrollbar-color: transparent;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 1px;
+      height: 1px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+  }
+
+  &__filters-list {
+    width: 1715px;
+    margin: -5px;
+
+    & > li {
+      display: inline-block;
+      margin: 5px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media-min ($md) {
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+    &__filters {
+      margin-bottom: 60px;
+    }
+
+    &__filters-list {
+      margin: -10px;
+
+      & > li {
+        margin: 10px;
+      }
+    }
+
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: -15px;
+
+      & > * {
+        flex-basis: 100%;
+        max-width: calc(50% - 30px);
+        margin: 15px;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 65px;
+
+    &__title {
+      margin-bottom: 60px;
+    }
+
+    &__filters {
+      overflow: visible;
+    }
+
+    &__filters-list {
+      width: auto;
+      text-align: center;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-bottom: 80px;
+  }
+}

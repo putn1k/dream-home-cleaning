@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @include('html/head/index.html')
+  <title>Article page</title>
+</head>
+
+<body class="indent-reset site">
+  <div aria-hidden="true"
+       id="site-top"></div>
+  <div class="site__container">
+    @include('html/header/index.html')
+    <div class="site__content">
+      @include('html/common/breadcrumbs.html', {title: 'Unveiling the Mystery: How the Cost of Cleaning Upholstery is Formed in Dubai Cleaning Companies'})
+      <main>
+        @include('html/blog/article-5.html')
+      </main>
+    </div>
+    @include('html/footer/index.html')
+  </div>
+  @include('html/common/scripts.html')
+</body>
+
+</html>

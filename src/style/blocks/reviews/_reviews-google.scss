@@ -1,0 +1,110 @@
+.reviews-google {
+  margin-bottom: 40px;
+
+  & .wp-google-list {
+    font-family: $main-font, Arial, Helvetica, sans-serif !important;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  & .wp-google-content-inner {
+    margin-bottom: 40px !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+    scrollbar-color: transparent;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 1px;
+      height: 1px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+
+    & .wp-google-reviews {
+      display: grid;
+      gap: 10px;
+      grid-auto-flow: column;
+    }
+
+    &>.wp-google-url {
+      display: none !important;
+    }
+
+    & a.wp-google-name {
+      color: var(--theme-text) !important;
+    }
+  }
+
+  & .wp-google-review {
+    width: 330px !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    color: var(--theme-text) !important;
+    background-color: var(--light-blue) !important;
+    border-radius: 10px !important;
+  }
+
+  & .wp-google-place {
+    padding: 20px !important;
+    padding-right: 55px !important;
+    color: var(--theme-text) !important;
+    background-color: var(--light-bg) !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    max-width: 330px !important;
+  }
+
+  & .wp-gr .wp-google-powered img {
+    max-width: none !important;
+  }
+
+  @include media-min ($md) {
+    & .wp-google-review {
+      width: 390px !important;
+      padding: 30px !important;
+    }
+
+    & .wp-google-place {
+      padding: 40px 60px !important;
+      max-width: 375px !important;
+    }
+  }
+
+  @include media-min ($xl) {
+    & .wp-google-review {
+      width: auto !important;
+    }
+
+    & .wp-google-content-inner {
+      margin-bottom: 40px !important;
+      overflow-x: visible !important;
+      width: auto !important;
+
+      & .wp-google-reviews {
+        display: grid;
+        gap: 30px;
+        grid-auto-flow: unset;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  @include media-min ($xxl) {
+    margin-bottom: 0;
+
+    & .wp-google-list {
+      display: grid;
+      grid-template-columns: 8fr 4fr;
+      align-items: start
+    }
+
+    & .wp-google-place {
+      order: 2;
+      justify-self: end;
+    }
+  }
+}

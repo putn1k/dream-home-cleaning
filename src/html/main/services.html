@@ -1,0 +1,44 @@
+<section class="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 align-self-center">
+        <h2 class="indent-reset title-md services__title">Services</h2>
+      </div>
+      <div class="col-12 order-md-last">
+        <div class="services__slider-wrapper">
+          <div class="services__slider slider">
+            <div class="swiper-wrapper slider__wrapper">
+              @include('../common/service-card.html', {addClass: 'swiper-slide', isLazy: true, img: 'service1', level: '3', title: 'Sofa Deep Cleaning & Shampooing', descr: 'Choose Dream Home for a comprehensive sofa cleaning experience that will enhance the appearance and longevity of your furniture.', method: 'Wet (shampooing) or dry (vacuuming + steaming)', cleaningTime: 'About 1-2 hours ', dryingTime: 'About 2-3 hours, indors 4-5 hours' })
+              @include('../common/service-card.html', {addClass: 'swiper-slide', isLazy: true, img: 'service2', level: '3', title: 'Carpet & Rugs Deep Cleaning & Shampooing', descr: 'Dream Home is dedicated to providing you with exceptional carpet cleaning services that leave your carpets looking fresh, clean, and hygienic. Our highly trained technicians follow a meticulous four-stage cleaning process to ensure outstanding results.', method: 'Wet (shampooing)', cleaningTime: 'About 1-2 hours', dryingTime: 'Outside 2-3 hours, indoors 4-6 hours' })
+              @include('../common/service-card.html', {addClass: 'swiper-slide', isLazy: true, img: 'service3', level: '3', title: 'Baby Car Seat & Stroller Cleaning & Sanitizing', descr: 'Dream Home understands the importance of maintaining a clean and comfortable car interior for a pleasant driving experience. Our highly trained technicians follow a meticulous four-stage cleaning process to ensure both the car interior and carpets are thoroughly cleaned, revitalized, and ready for your adventures on the road.', method: 'Wet (shampooing) or dry (vacuuming + steaming)', cleaningTime: 'About 40 min', dryingTime: 'About 1-2 hours, indors 2-3 hours' })
+              @include('../common/service-card.html', {addClass: 'swiper-slide', isLazy: true, img: 'service4', level: '3', title: 'Tiles, Grout Floor Cleaning & Polishing', descr: 'Dream Home understands the importance of clean and gleaming tiles and grout floors in creating a fresh and inviting space. Our highly trained technicians follow a meticulous three-stage cleaning process to ensure your tiles and grout floors are thoroughly cleaned and protected.', method: 'Wet (deep scrabbing)', cleaningTime: 'About 3-4 hours', dryingTime: 'indors 1 hour' })
+              @include('../common/service-card.html', {addClass: 'swiper-slide', isLazy: true, img: 'service5', level: '3', title: 'Artificial Grass Cleaning & Sanitizing', descr: 'Dream Home understands the importance of a clean and vibrant artificial grass lawn for a picturesque outdoor space. Our highly trained technicians follow a meticulous three-stage cleaning process to ensure your artificial grass lawn is thoroughly cleaned and well-maintained.', method: 'Wet (shampooing + deep scrabbing)', cleaningTime: 'About 1-2 hours', dryingTime: 'About 3-4 hours ' })
+              @include('../common/service-card.html', {addClass: 'swiper-slide', isLazy: true, img: 'service6', level: '3', title: 'Boat & Yacht Interior Cleaning',descr: 'Choose Dream Home for an exceptional boat and yacht interior cleaning experience. With our commitment to excellence and customer satisfaction, we will transform your vessel\'s interior into a pristine space that reflects your style and enhances your boating experience.', method: 'Wet (shampooing) or dry (vacuuming + steaming)', cleaningTime: 'About 2-3 hours', dryingTime: 'indors 2-3 hours' })
+              @include('../common/service-card.html', {addClass: 'swiper-slide', isLazy: true, img: 'service7', level: '3', title: 'Dining Chairs Cleaning & Sanitizing', descr: 'At Dream Home, we take pride in our attention to detail and commitment to customer satisfaction. Our experienced technicians understand the importance of maintaining clean and comfortable dining chairs for an enjoyable dining experience.', method: 'Wet (shampooing) or dry (vacuuming + steaming)', cleaningTime: 'About 1 hour', dryingTime: 'About 3-4 hours, indors 4-6 hours' })
+              @include('../common/service-card.html', {addClass: 'swiper-slide', isLazy: true, img: 'service8', level: '3', title: 'Curtains, Blinds Cleaning & Sanitizing', descr: 'Choose Dream Home for a comprehensive curtain cleaning service that goes beyond surface-level cleaning. Our focus on quality and customer satisfaction sets us apart. Experience the difference with our professional curtain cleaning, and let your curtains become a standout feature of your space.', method: 'Wet (vacuuming + steaming) or dry (vacuuming)', cleaningTime: 'About 1-2 hours', dryingTime: 'About 3-4 hours' })
+            </div>
+          </div>
+          <div class="services__slider-monitor">
+            <div class="services__slider-controls">
+              @include('../common/slider-controls.html')
+            </div>
+            <div class="services__slider-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 align-self-center">
+        <div class="services__link">
+          <a class="btn"
+             href="page-services.html">
+            <span>All services</span>
+            <svg width="14"
+                 height="14"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

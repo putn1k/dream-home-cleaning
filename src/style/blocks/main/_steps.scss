@@ -1,0 +1,41 @@
+.steps {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__accent-item {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 30px;
+  }
+
+  @include media-min ($md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    &__title {
+      margin-bottom: 60px;
+    }
+
+    &__accent-item {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}

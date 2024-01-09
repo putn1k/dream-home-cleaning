@@ -1,0 +1,104 @@
+.hero {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: var(--theme-text-inv);
+  background-color: var(--theme-bg-inv);
+  background-image: url('../img/default/hero-cover.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #000000;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  &__inner {
+    position: relative;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__links {
+    display: none;
+  }
+
+  &__link {
+    --btn-offset: 26px 42px;
+
+    margin-top: 40px;
+  }
+
+  &__glassmorph {
+    padding: 16px;
+    padding-right: 0;
+  }
+
+  @include media-min ($md) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__links {
+      --btn-offset: 26px 18px;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: -5px;
+      margin-bottom: 35px;
+
+      & li {
+        margin: 5px;
+      }
+    }
+
+    &__link {
+      display: none;
+    }
+
+    &__glassmorph {
+      &--left {
+        text-align: left;
+      }
+
+      &--right {
+        text-align: right;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &__links {
+      margin: -10px;
+      margin-bottom: 60px;
+
+      & li {
+        margin: 10px;
+      }
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-top: 160px;
+    padding-bottom: 160px;
+
+    &__links {
+      margin-bottom: 0;
+    }
+  }
+}

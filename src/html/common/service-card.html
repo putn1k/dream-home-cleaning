@@ -1,0 +1,45 @@
+<article class="@if(context.addClass){@addClass} service-card"
+         @if(context.id){id="@id"
+         }>
+  <div class="service-card__img">
+    <img @if(context.isLazy){class="swiper-lazy"
+         }
+         @if(context.isLazy){data-}src="img/mock/@img.jpg"
+         loading="lazy"
+         alt="">
+    @if(context.isLazy){<div class="swiper-lazy-preloader"></div>}
+  </div>
+  <div class="service-card__meta">
+    <h@level class="indent-reset service-card__title">@title</h@level>
+    <div class="service-card__descr">@descr</div>
+    <div class="service-card__tags">
+      <div class="service-tag">
+        <div class="service-tag__title service-tag__title--wash-icon">Cleaning methods</div>
+        <div class="service-tag__descr">@method</div>
+      </div>
+      <div class="service-tag">
+        <div class="service-tag__title service-tag__title--clock-icon">Cleaning time</div>
+        <div class="service-tag__descr">@cleaningTime</div>
+      </div>
+      <div class="service-tag">
+        <div class="service-tag__title service-tag__title--clock-icon">Drying time</div>
+        <div class="service-tag__descr">@dryingTime</div>
+      </div>
+    </div>
+    <div class="service-card__btns">
+      <button class="btn-reset btn"
+              type="button"
+              data-hystmodal="#book-us"
+              data-subject="@title">Book service</button>
+      <a class="btn btn--bordered"
+         href="page-service.html">
+        <span>More info</span>
+        <svg width="14"
+             height="14"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,129 @@
+<section class="services-main">
+  <div class="container">
+    <h1 class="indent-reset title-md services-main__title">Services</h1>
+    <div class="services-main__content">
+      <div class="services-main__filters">
+        <ul class="list-reset services-main__filters-list">
+          <li>
+            <button class="btn-reset btn btn--icon-reverse"
+                    type="button"
+                    data-filter="all">
+              <span>All services</span>
+              <svg width="35"
+                   height="35"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-all"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="btn-reset btn btn--icon-reverse btn--light"
+                    type="button"
+                    data-filter="sofa">
+              <span>Sofa Deep Cleaning & Shampooing</span>
+              <svg width="35"
+                   height="35"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#sofa"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="btn-reset btn btn--icon-reverse btn--light"
+                    type="button"
+                    data-filter="carpet">
+              <span>Carpet & Rugs Deep Cleaning & Shampooing</span>
+              <svg width="35"
+                   height="35"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#carpet"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="btn-reset btn btn--icon-reverse btn--light"
+                    type="button"
+                    data-filter="babyseat">
+              <span>Baby Car Seat & Stroller Cleaning & Sanitizing</span>
+              <svg width="35"
+                   height="35"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#babyseat"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="btn-reset btn btn--icon-reverse btn--light"
+                    type="button"
+                    data-filter="tiles">
+              <span>Tiles, Grout Floor Cleaning & Polishing</span>
+              <svg width="35"
+                   height="35"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#tiles"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="btn-reset btn btn--icon-reverse btn--light"
+                    type="button"
+                    data-filter="grass">
+              <span>Artificial Grass Cleaning & Sanitizing</span>
+              <svg width="35"
+                   height="35"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#grass"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="btn-reset btn btn--icon-reverse btn--light"
+                    type="button"
+                    data-filter="boat">
+              <span>Boat & Yacht Interior Cleaning</span>
+              <svg width="35"
+                   height="35"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#boat"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="btn-reset btn btn--icon-reverse btn--light"
+                    type="button"
+                    data-filter="chair">
+              <span>Dining Chairs Cleaning & Sanitizing</span>
+              <svg width="35"
+                   height="35"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#chair"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="btn-reset btn btn--icon-reverse btn--light"
+                    type="button"
+                    data-filter="curtains">
+              <span>Curtains, Blinds Cleaning & Sanitizing</span>
+              <svg width="35"
+                   height="35"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#curtains"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="services-main__list">
+        @include('../common/service-card.html', {id: 'sofa', img: 'service1', level: '3', title: 'Sofa Deep Cleaning & Shampooing', descr: 'Choose Dream Home for a comprehensive sofa cleaning experience that will enhance the appearance and longevity of your furniture.', method: 'Wet (shampooing) or dry (vacuuming + steaming)', cleaningTime: 'About 1-2 hours ', dryingTime: 'About 2-3 hours, indors 4-5 hours' })
+        @include('../common/service-card.html', {id: 'carpet', img: 'service2', level: '3', title: 'Carpet & Rugs Deep Cleaning & Shampooing', descr: 'Dream Home is dedicated to providing you with exceptional carpet cleaning services that leave your carpets looking fresh, clean, and hygienic. Our highly trained technicians follow a meticulous four-stage cleaning process to ensure outstanding results.', method: 'Wet (shampooing)', cleaningTime: 'About 1-2 hours', dryingTime: 'Outside 2-3 hours, indoors 4-6 hours' })
+        @include('../common/service-card.html', {id: 'babyseat', img: 'service3', level: '3', title: 'Baby Car Seat & Stroller Cleaning & Sanitizing', descr: 'Dream Home understands the importance of maintaining a clean and comfortable car interior for a pleasant driving experience. Our highly trained technicians follow a meticulous four-stage cleaning process to ensure both the car interior and carpets are thoroughly cleaned, revitalized, and ready for your adventures on the road.', method: 'Wet (shampooing) or dry (vacuuming + steaming)', cleaningTime: 'About 40 min', dryingTime: 'About 1-2 hours, indors 2-3 hours' })
+        @include('../common/service-card.html', {id: 'tiles', img: 'service4', level: '3', title: 'Tiles, Grout Floor Cleaning & Polishing', descr: 'Dream Home understands the importance of clean and gleaming tiles and grout floors in creating a fresh and inviting space. Our highly trained technicians follow a meticulous three-stage cleaning process to ensure your tiles and grout floors are thoroughly cleaned and protected.', method: 'Wet (deep scrabbing)', cleaningTime: 'About 3-4 hours', dryingTime: 'indors 1 hour' })
+        @include('../common/service-card.html', {id: 'grass', img: 'service5', level: '3', title: 'Artificial Grass Cleaning & Sanitizing', descr: 'Dream Home understands the importance of a clean and vibrant artificial grass lawn for a picturesque outdoor space. Our highly trained technicians follow a meticulous three-stage cleaning process to ensure your artificial grass lawn is thoroughly cleaned and well-maintained.', method: 'Wet (shampooing + deep scrabbing)', cleaningTime: 'About 1-2 hours', dryingTime: 'About 3-4 hours ' })
+        @include('../common/service-card.html', {id: 'boat', img: 'service6', level: '3', title: 'Boat & Yacht Interior Cleaning',descr: 'Choose Dream Home for an exceptional boat and yacht interior cleaning experience. With our commitment to excellence and customer satisfaction, we will transform your vessel\'s interior into a pristine space that reflects your style and enhances your boating experience.', method: 'Wet (shampooing) or dry (vacuuming + steaming)', cleaningTime: 'About 2-3 hours', dryingTime: 'indors 2-3 hours' })
+        @include('../common/service-card.html', {id: 'chair', img: 'service7', level: '3', title: 'Dining Chairs Cleaning & Sanitizing', descr: 'At Dream Home, we take pride in our attention to detail and commitment to customer satisfaction. Our experienced technicians understand the importance of maintaining clean and comfortable dining chairs for an enjoyable dining experience.', method: 'Wet (shampooing) or dry (vacuuming + steaming)', cleaningTime: 'About 1 hour', dryingTime: 'About 3-4 hours, indors 4-6 hours' })
+        @include('../common/service-card.html', {id: 'curtains', img: 'service8', level: '3', title: 'Curtains, Blinds Cleaning & Sanitizing', descr: 'Choose Dream Home for a comprehensive curtain cleaning service that goes beyond surface-level cleaning. Our focus on quality and customer satisfaction sets us apart. Experience the difference with our professional curtain cleaning, and let your curtains become a standout feature of your space.', method: 'Wet (vacuuming + steaming) or dry (vacuuming)', cleaningTime: 'About 1-2 hours', dryingTime: 'About 3-4 hours' })
+      </div>
+    </div>
+  </div>
+</section>

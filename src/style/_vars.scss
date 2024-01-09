@@ -1,0 +1,47 @@
+:root {
+  --white: #FFFFFF;
+  --haiti: #110E2C;
+  --mandy: #ED5D6B;
+  --radical-red: #F63853;
+  --casablanca: #FCC049;
+  --old-lace: #FEF9F2;
+  --athens-gray: #F1F2F5;
+
+  // colors cascade
+  --theme-text: var(--haiti);
+  --theme-text-inv: var(--white);
+  --theme-bg: var(--white);
+  --theme-bg-inv: var(--haiti);
+  --light-bg: var(--old-lace);
+  --light-blue: var(--athens-gray);
+  --accent: var(--mandy);
+  --accent-gradient: linear-gradient(45deg, var(--radical-red) 0%, var(--casablanca) 100%);
+  --accent-shadow: 0px 6px 10px 0px rgba(247, 68, 83, 0.16);
+  --dark-shadow:
+    0 2px 5px 0 rgba(48, 42, 125, 0.01),
+    0 8px 17px 0 rgba(48, 42, 125, 0.06),
+    0 36px 80px 0 rgba(48, 42, 125, 0.03);
+  --card-shadow:
+    0 2px 5px 0 rgba(48, 42, 125, 0.01),
+    0 8px 12px 0 rgba(48, 42, 125, 0.02),
+    3px 2px 14px 3px rgba(48, 42, 125, 0.03);
+  --card-hover-shadow:
+    0 2px 5px 0 rgba(48, 42, 125, 0.03),
+    0 8px 15px 0 rgba(48, 42, 125, 0.08),
+    0 2px 14px 0 rgba(48, 42, 125, 0.06);
+  --error: var(--radical-red);
+
+  // vendor vars
+  --swiper-preloader-color: var(--accent);
+  --swiper-theme-color: var(--theme-text);
+  --swiper-pagination-bullet-size: 13px;
+}
+
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;
+$main-font: "Poppins";
+$mobile-min-width: 360px;

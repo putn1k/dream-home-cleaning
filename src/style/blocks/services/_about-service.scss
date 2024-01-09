@@ -1,0 +1,79 @@
+.about-service {
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__content {
+    @include cms-text;
+
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__stages {
+    padding-bottom: 40px;
+  }
+
+  &__tags {
+    border-top: 1px solid #E3E3E3;
+    padding-top: 40px;
+  }
+
+  &__tags-descr {
+    margin-bottom: 40px;
+    max-width: 915px;
+  }
+
+  &__tags-list {
+    display: grid;
+    row-gap: 40px;
+  }
+
+  @include media-min ($md) {
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__stages {
+      padding-bottom: 50px;
+    }
+
+    &__tags-list {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 130px;
+
+    &__content {
+      margin-bottom: 60px;
+    }
+
+    &__stages {
+      padding-bottom: 80px;
+    }
+
+    &__tags-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+  }
+
+  @include media-min ($xxl) {
+    padding-bottom: 160px;
+
+    &__tags-list {
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 64px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.blog {
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__slider {
+    margin-bottom: 40px;
+  }
+
+  &__pagination {
+    overflow: hidden;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__link {
+    text-align: center;
+  }
+
+  @include media-min ($md) {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 130px;
+    padding-bottom: 65px;
+
+    &__title {
+      margin-bottom: 60px;
+    }
+
+    &__slider {
+      margin: -15px;
+      padding: 15px;
+      margin-bottom: 60px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-top: 160px;
+    padding-bottom: 80px;
+  }
+}

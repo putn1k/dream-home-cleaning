@@ -1,0 +1,38 @@
+.service-stages {
+  display: grid;
+  row-gap: 20px;
+  counter-reset: stages;
+
+  &__item {
+    padding: 20px;
+    color: var(--theme-text);
+    background-color: var(--light-bg);
+    border-radius: 10px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    counter-increment: stages;
+
+    &::before {
+      content: 'Stage 'counter(stages)': ';
+      background-image: var(--accent-gradient);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  @include media-min ($md) {
+    &__item {
+      padding: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    row-gap: 30px;
+
+    &__item {
+      padding: 40px;
+    }
+  }
+}

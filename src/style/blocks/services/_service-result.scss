@@ -1,0 +1,113 @@
+.service-result {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: var(--theme-text);
+  background-color: var(--light-blue);
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__descr {
+    @include cms-text;
+
+    margin-bottom: 30px;
+  }
+
+  &__gallery {
+    margin-top: 40px;
+  }
+
+  &__slider {
+    margin: -15px;
+    padding: 15px;
+  }
+
+  &__slide {
+    position: relative;
+    height: 0;
+    padding-bottom: 130%;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+
+    & img {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__pagination {
+    overflow: hidden;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  @include media-min ($md) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__slide {
+      padding-bottom: 61%;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    &__inner {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 30px;
+    }
+
+    &__title {
+      grid-column: span 12;
+      margin-bottom: 60px;
+    }
+
+    &__descr-wrapper {
+      grid-column: span 4;
+    }
+
+    &__gallery {
+      overflow: hidden;
+      grid-column: span 8;
+      margin-top: 0;
+    }
+
+    &__slide {
+      padding-bottom: 63%;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-top: 160px;
+    padding-bottom: 160px;
+
+    &__title {
+      grid-column: span 6;
+    }
+
+    &__descr {
+      margin-bottom: 60px;
+    }
+
+    &__descr-wrapper {
+      grid-column: 1 / span 6;
+    }
+
+    &__gallery {
+      grid-row: 1 / 3;
+      grid-column: 7 / span 6;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+
+  & > * {
+    margin: 5px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    color: var(--theme-text-inv);
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__link {
+      transition: background-color .25s ease-in-out;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}

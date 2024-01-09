@@ -1,0 +1,25 @@
+<section class="blog">
+  <div class="container">
+    <h2 class="indent-reset title-md blog__title">Blog</h2>
+    <div class="blog__slider slider">
+      <div class="swiper-wrapper slider__wrapper">
+        @include('../common/blog-card.html', {addClass: 'swiper-slide', isLazy: true, level: '3', title: 'Subtitle', excerpt: 'After an initial assessment of your furniture\'s condition, we will schedule a convenient service appointment for you. We will schedule a convenient service appointment for you' })
+        @include('../common/blog-card.html', {addClass: 'swiper-slide', isLazy: true, level: '3', title: 'Subtitle', excerpt: 'After an initial assessment of your furniture\'s condition, we will schedule a convenient service appointment for you. We will schedule a convenient service appointment for you' })
+        @include('../common/blog-card.html', {addClass: 'swiper-slide', isLazy: true, level: '3', title: 'Subtitle', excerpt: 'After an initial assessment of your furniture\'s condition, we will schedule a convenient service appointment for you. We will schedule a convenient service appointment for you' })
+        @include('../common/blog-card.html', {addClass: 'swiper-slide', isLazy: true, level: '3', title: 'Subtitle', excerpt: 'After an initial assessment of your furniture\'s condition, we will schedule a convenient service appointment for you. We will schedule a convenient service appointment for you' })
+      </div>
+      <div class="blog__pagination"></div>
+    </div>
+    <div class="blog__link">
+      <a class="btn btn--bordered"
+         href="page-blog.html">
+        <span>All articles</span>
+        <svg width="14"
+             height="14"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

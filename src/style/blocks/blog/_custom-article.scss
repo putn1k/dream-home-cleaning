@@ -1,0 +1,284 @@
+.custom-article {
+  &__ol {
+    display: grid;
+    gap: 30px;
+    margin: 60px 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: custom-list;
+  }
+
+  &__ul {
+    display: grid;
+    gap: 30px;
+    margin: 60px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__ul-title {
+    margin-bottom: 15px;
+  }
+
+  &__ol-title {
+    display: flex;
+    align-items: center;
+    counter-increment: custom-list;
+    margin-bottom: 15px;
+
+    &::before {
+      content: counter(custom-list);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--theme-text-inv);
+      background-color: var(--accent);
+      background-image: var(--accent-gradient);
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+  }
+
+  &__middle {
+    margin: 60px 0;
+  }
+
+  &__poster-block {
+    & img {
+      display: block;
+      width: 100%;
+      max-height: 283px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__accent-block {
+    padding: 40px 30px;
+    color: var(--theme-text);
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    height: 100%;
+
+    @include cms-text;
+
+    & .btn {
+      margin-top: 30px;
+    }
+  }
+
+  &__iconed-list {
+    margin-top: 20px;
+
+    &>h2 {
+      margin: 0 auto;
+      margin-bottom: 40px;
+      max-width: 860px;
+      text-align: center;
+    }
+
+    &>ul {
+      margin: 0;
+      margin-bottom: 60px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 30px;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 77px;
+    height: 77px;
+    border-radius: 5px;
+    color: var(--accent);
+    background-color: #FEF2F3;
+  }
+
+  &__item-descr {
+    opacity: 0.6;
+  }
+
+  &__bottom {
+    position: relative;
+    padding-top: 60px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: var(--theme-bg-inv);
+      opacity: 0.6;
+    }
+  }
+
+  &__decor-block {
+    position: relative;
+    padding: 40px 30px;
+    color: var(--theme-text-inv);
+    background-color: var(--theme-bg-inv);
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 650px;
+
+    & img {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.7;
+    }
+  }
+
+  &__decor-text {
+    position: relative;
+    z-index: 1;
+
+    & .title-md {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include media-min ($md) {
+    &__ol {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+      row-gap: 40px;
+    }
+
+    &__ul {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+      row-gap: 40px;
+    }
+
+    &__iconed-list {
+      &>h2 {
+        margin-bottom: 50px;
+      }
+
+      &>ul {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 80px;
+      }
+    }
+
+    &__decor-block {
+      padding: 60px;
+      padding-right: 90px;
+    }
+
+    &__decor-text {
+      & .title-md {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__ol {
+      margin-top: 70px;
+      margin-bottom: 100px;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 50px;
+    }
+
+    &__ul {
+      margin-top: 70px;
+      margin-bottom: 100px;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 50px;
+    }
+
+    &__ul-title {
+      margin-bottom: 30px;
+    }
+
+    &__ol-title {
+      margin-bottom: 30px;
+    }
+
+    &__middle {
+      margin-bottom: 100px;
+    }
+
+    &__iconed-list {
+      margin-top: 40px;
+
+      &>h2 {
+        margin-bottom: 60px;
+      }
+
+      &>ul {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 100px;
+      }
+    }
+
+    &__bottom {
+      padding-top: 100px;
+    }
+
+    &__decor-block {
+      padding: 100px;
+      padding-right: 320px;
+      min-height: 950px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__ol {
+      margin-top: 120px;
+      margin-bottom: 130px;
+      row-gap: 80px;
+    }
+
+    &__ul {
+      margin-top: 120px;
+      margin-bottom: 130px;
+      row-gap: 80px;
+    }
+
+    &__middle {
+      margin-top: 80px;
+      margin-bottom: 130px;
+    }
+
+    &__accent-block {
+      padding: 50px 40px;
+
+      & .btn {
+        margin-top: 40px;
+      }
+    }
+
+    &__bottom {
+      padding-top: 130px;
+    }
+
+    &__decor-block {
+      padding-right: 140px;
+    }
+
+    &__decor-text {
+      display: flex;
+
+      & .title-md {
+        flex-basis: 55%;
+        flex-shrink: 0;
+        margin-right: 150px;
+      }
+    }
+  }
+}

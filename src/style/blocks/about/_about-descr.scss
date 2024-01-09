@@ -1,0 +1,43 @@
+.about-descr {
+  &__block {
+    --btn-text: var(--theme-text-inv);
+    --btn-bg: transparent;
+    --btn-border: var(--theme-bg);
+
+    padding: 20px;
+    background-color: var(--light-blue);
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include cms-text;
+
+    &--accent {
+      color: var(--theme-text-inv);
+      background-image: var(--accent-gradient);
+      margin-top: 30px;
+    }
+  }
+
+  @include media-min ($md) {
+    &__block {
+      padding: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__block {
+      height: 100%;
+      padding: 40px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    height: 100%;
+
+    &__block {
+      &--accent {
+        height: calc(100% - 30px);
+      }
+    }
+  }
+}

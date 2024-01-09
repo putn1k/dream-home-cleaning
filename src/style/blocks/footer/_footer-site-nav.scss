@@ -1,0 +1,32 @@
+.footer-site-nav {
+  &__list {
+    @include list-reset;
+
+    column-gap: 30px;
+    column-count: 2;
+
+    & li {
+      margin-bottom: 20px;
+    }
+
+    & a {
+      text-decoration-color: transparent;
+      opacity: 0.8;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__list {
+      margin-bottom: 60px;
+
+      & a {
+        transition: opacity .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          text-decoration-color: inherit;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

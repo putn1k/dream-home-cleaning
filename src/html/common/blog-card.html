@@ -1,0 +1,17 @@
+<article class="@if(context.addClass){@addClass} blog-card">
+  <div class="blog-card__poster">
+    <img @if(context.isLazy){class="swiper-lazy"
+         }
+         @if(context.isLazy){data-}src="img/mock/@if(context.img){@img}@if(!context.img){blog-poster.jpg}"
+         loading="lazy"
+         alt="">
+    @if(context.isLazy){<div class="swiper-lazy-preloader"></div>}
+
+  </div>
+  <div class="blog-card__meta">
+    <h@level class="indent-reset title-sm blog-card__title">@title</h@level>
+    <div class="blog-card__excerpt">@excerpt</div>
+    <a class="blog-card__link"
+       href="@if(context.link){@link}@if(!context.link){page-single.html}">More</a>
+  </div>
+</article>

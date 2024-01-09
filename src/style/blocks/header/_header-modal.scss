@@ -1,0 +1,49 @@
+.header-modal {
+  pointer-events: none;
+
+  &[aria-hidden="false"] {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    height: 52px;
+    z-index: 3;
+    pointer-events: auto;
+
+    & .header-modal__content {
+      display: block;
+
+      @include anim(fade, .3s);
+    }
+  }
+
+  &__content {
+    position: fixed;
+    top: 56px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    color: var(--theme-text);
+    background-color: var(--theme-bg);
+    overflow: auto;
+    padding-top: 18px;
+    padding-bottom: 50px;
+  }
+
+  &__nav {
+    margin-bottom: 30px;
+  }
+
+  &__phone {
+    & a {
+      font-weight: 600;
+      text-decoration-color: transparent;
+    }
+  }
+
+  @include media-min ($md) {
+    display: none;
+  }
+}

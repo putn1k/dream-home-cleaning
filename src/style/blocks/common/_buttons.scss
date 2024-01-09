@@ -1,0 +1,67 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: var(--btn-offset, 19px 18px);
+  color: var(--theme-text-inv);
+  background-color: var(--accent);
+  background-image: var(--accent-gradient);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  min-width: 192px;
+  text-align: center;
+
+  & svg {
+    margin-left: 10px;
+    flex-shrink: 0;
+  }
+
+  &--icon-reverse {
+    flex-direction: row-reverse;
+
+    & svg {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+
+  &--light {
+    font-weight: 400;
+    padding: 19px 18px;
+    color: var(--theme-text);
+    background-color: var(--theme-bg);
+    background-image: none;
+    box-shadow: var(--card-shadow);
+
+    & svg {
+      color: var(--accent);
+    }
+  }
+
+  &--bordered {
+    color: var(--btn-text, var(--accent));
+    background-color: var(--btn-bg, var(--theme-bg));
+    background-image: none;
+    border: 2px solid var(--btn-border, var(--accent));
+  }
+
+  @include media-min ($xl) {
+    transition: color .15s ease-in-out, background-color .2s ease-in-out, box-shadow .2s ease-in-out;
+
+    &:hover {
+      box-shadow: var(--accent-shadow);
+    }
+
+    &--light {
+      &:hover {
+        color: var(--accent);
+        box-shadow: var(--dark-shadow);
+      }
+    }
+  }
+}

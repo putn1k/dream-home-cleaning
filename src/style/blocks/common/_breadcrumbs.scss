@@ -1,0 +1,30 @@
+.breadcrumbs {
+  padding-top: 20px;
+  color: var(--theme-text);
+
+  & a {
+    color: inherit;
+    text-decoration-color: transparent;
+  }
+
+  & .current-item {
+    opacity: 0.6;
+  }
+
+  @include media-min ($md) {
+    padding-top: 32px;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 70px;
+
+    & a {
+      transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+      &:hover {
+        color: var(--accent);
+        text-decoration-color: var(--accent);
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.site {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100 * var(--vh, 1vh));
+  }
+
+  &__header {
+    flex-shrink: 0;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__entry {
+    @include cms-text;
+
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+
+  &__footer {
+    flex-shrink: 0;
+  }
+
+  @include media-min($md) {
+    &__entry {
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
+  }
+
+  @include media-min($xl) {
+    &__entry {
+      padding-bottom: 100px;
+    }
+  }
+
+  @include media-min($xxl) {
+    &__entry {
+      padding-bottom: 130px;
+    }
+  }
+}
