@@ -10,7 +10,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 3;
+    z-index: 4;
     min-width: $mobile-min-width;
 
     @include anim(fade-down, .3s);
