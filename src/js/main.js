@@ -35,6 +35,10 @@ import {
   initProjectsGallery
 } from './modules/projects.js';
 
+import {
+  initQuiz
+} from './modules/quiz.js';
+
 document.addEventListener( 'DOMContentLoaded', () => {
   iosVhFix();
   window.addEventListener( 'load', () => {
@@ -49,5 +53,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     initSlider( '.blog__slider', Options.Swiper.Blog );
     initServicesFilter();
     initProjectsGallery();
+    initQuiz();
   } );
 } );
