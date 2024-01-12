@@ -38,11 +38,11 @@
 }
 
 @mixin cms-text {
-  & > *:first-child {
+  &>*:first-child {
     margin-top: 0;
   }
 
-  & > *:last-child {
+  &>*:last-child {
     margin-bottom: 0;
   }
 }
@@ -51,4 +51,20 @@
   animation-name: $animation-name;
   animation-fill-mode: forwards;
   animation-duration: $animation-time;
+}
+
+@mixin custom-scroll {
+  scrollbar-color: var(--scrollbar-thumb, #cccccc) var(--scrollbar, transparent);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: var(--scrollbar, transparent);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb, #cccccc);
+    border-radius: 99em;
+  }
 }
