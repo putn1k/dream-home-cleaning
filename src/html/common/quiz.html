@@ -1,0 +1,195 @@
+<div class="quiz-trigger">
+  <div class="container">
+    <div class="quiz-trigger__inner">
+      <button class="btn-reset quiz-trigger__btn"
+              type="button"
+              data-hystmodal="#quiz-modal">Cleaning cost calculator</button>
+      <button class="btn-reset quiz-trigger__close"
+              type="button"
+              aria-label="Close banner"
+              data-label=".quiz-trigger">
+        <svg width="24"
+             height="24"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="hystmodal hystmodal--simple"
+     id="quiz-modal"
+     aria-hidden="true">
+  <div class="hystmodal__wrap is-fullwidth-hystmodal">
+    <div class="hystmodal__window hystmodal__window--form"
+         role="dialog"
+         aria-modal="true">
+      <div class="quiz-modal">
+        <button class="btn-reset quiz-modal__close"
+                type="button"
+                aria-label="Close window"
+                data-hystclose>
+          <svg width="18"
+               height="18"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <form class="quiz-modal__slider slider"
+              id="quiz-form"
+              data-validate>
+          <input type="hidden"
+                 name="Form"
+                 value="Cleaning cost calculator">
+          <div class="swiper-wrapper slider__wrapper">
+            <div class="swiper-slide quiz-modal__slide quiz-modal__scroll-content"
+                 data-slide-type-item="checkbox">
+              <div class="quiz-modal__stepper stepper">
+                <div class="stepper__item stepper__item--fill">Step 1</div>
+                <div class="stepper__item">Step 2</div>
+              </div>
+              <h2 class="indent-reset title-sm quiz-modal__slide-title">What would you like to clean?</h2>
+              <ul class="list-reset quiz-modal__checkbox-list">
+                <li>
+                  <label class="checkbox-card">
+                    <input class="checkbox-card__input"
+                           name="Service"
+                           type="checkbox"
+                           value="Sofa & Furniture">
+                    <span class="checkbox-card__content">
+                      <img src="img/mock/service1.jpg"
+                           alt="">
+                      <span class="checkbox-card__title">Sofa & Furniture</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-card">
+                    <input class="checkbox-card__input"
+                           name="Service"
+                           type="checkbox"
+                           value="Sofa & Furniture">
+                    <span class="checkbox-card__content">
+                      <img src="img/mock/service1.jpg"
+                           alt="">
+                      <span class="checkbox-card__title">Sofa & Furniture</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-card">
+                    <input class="checkbox-card__input"
+                           name="Service"
+                           type="checkbox"
+                           value="Carpet">
+                    <span class="checkbox-card__content">
+                      <img src="img/mock/service2.jpg"
+                           alt="">
+                      <span class="checkbox-card__title">Carpet</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-card">
+                    <input class="checkbox-card__input"
+                           name="Service"
+                           type="checkbox"
+                           value="Car Interior">
+                    <span class="checkbox-card__content">
+                      <img src="img/mock/service3.jpg"
+                           alt="">
+                      <span class="checkbox-card__title">Car Interior</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-card">
+                    <input class="checkbox-card__input"
+                           name="Service"
+                           type="checkbox"
+                           value="Tiles & Grout Floor">
+                    <span class="checkbox-card__content">
+                      <img src="img/mock/service4.jpg"
+                           alt="">
+                      <span class="checkbox-card__title">Tiles & Grout Floor</span>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-card">
+                    <input class="checkbox-card__input"
+                           name="Service"
+                           type="checkbox"
+                           value="Artificial Grass">
+                    <span class="checkbox-card__content">
+                      <img src="img/mock/service5.jpg"
+                           alt="">
+                      <span class="checkbox-card__title">Artificial Grass</span>
+                    </span>
+                  </label>
+                </li>
+
+              </ul>
+            </div>
+            <div class="swiper-slide quiz-modal__slide"
+                 data-slide-type-item="files">
+              <div class="quiz-modal__stepper stepper">
+                <div class="stepper__item stepper__item--fill">Step 1</div>
+                <div class="stepper__item stepper__item--fill">Step 2</div>
+              </div>
+              <h2 class="indent-reset title-sm quiz-modal__slide-title">Attach a photo if possible</h2>
+              <label class="quiz-modal__drop-zone">
+                <input type="file"
+                       accept="image/jpeg, image/png"
+                       multiple>
+                <span class="quiz-modal__file-status">Drop files here to upload</span>
+              </label>
+            </div>
+            <div class="swiper-slide quiz-modal__slide quiz-modal__form-slide"
+                 data-slide-type-item="form">
+              <h2 class="indent-reset title-md quiz-modal__slide-title quiz-modal__slide-title--final">
+                <svg width="60"
+                     height="60"
+                     aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#final-tick"></use>
+                </svg>
+                <span>Excellent. Last step!</span>
+              </h2>
+              <div class="quiz-modal__form form">
+                <div class="indent-reset title-sm quiz-modal__form-title">Fill in your details to get a quote</div>
+                <div class="form__field">
+                  <input class="form__input quiz-modal__input"
+                         type="text"
+                         name="Name"
+                         placeholder="Your name"
+                         data-validate="name"
+                         required>
+                </div>
+                <div class="form__field">
+                  <input class="form__input quiz-modal__input"
+                         type="tel"
+                         name="Phone"
+                         placeholder="Phone"
+                         data-validate="phone"
+                         required>
+                </div>
+                <button class="btn-reset btn quiz-modal__form-submit"
+                        type="submit">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="quiz-modal__controls">
+          <button class="btn-reset btn btn--bordered quiz-modal__control"
+                  type="button"
+                  data-to-slide="back">Back
+          </button>
+          <button class="btn-reset btn quiz-modal__control"
+                  type="button"
+                  data-to-slide="next">Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
