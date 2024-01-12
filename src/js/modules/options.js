@@ -12,7 +12,7 @@ export const Options = {
   },
   Mask: {
     countryCode: '+971',
-    bodyMask: ' ___ ___ ____',
+    bodyMask: ' __ ___ ____',
   },
   ValidationErrors: {
     errorFieldCssClass: 'is-invalid',
@@ -33,7 +33,7 @@ export const Options = {
     },
   },
   Requests: {
-    HandlerURL: 'https://jsonplaceholder.typicode.com/posts',
+    HandlerURL: WP_Options.AJAX_URL,
   },
   Swiper: {
     Services: {
@@ -90,6 +90,16 @@ export const Options = {
         1600: {
           slidesPerView: 4,
         },
+      },
+    },
+    Quiz: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      watchSlidesProgress: true,
+      allowTouchMove: false,
+      navigation: {
+        prevEl: '.quiz-modal__controls [data-to-slide="back"]',
+        nextEl: '.quiz-modal__controls [data-to-slide="next"]',
       },
     },
     Blog: {
