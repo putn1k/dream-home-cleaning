@@ -33,7 +33,7 @@ export const Options = {
     },
   },
   Requests: {
-    HandlerURL: WP_Options.AJAX_URL,
+    HandlerURL: 'WP_Options.AJAX_URL',
   },
   Swiper: {
     Services: {

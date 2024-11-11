@@ -1,6 +1,6 @@
 .header-main {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   color: var(--theme-text);
   background-color: var(--theme-bg);
   box-shadow: var(--dark-shadow);
@@ -27,8 +27,7 @@
 
     & img {
       display: block;
-      width: 108px;
-      height: 23px;
+      max-width: 110px;
     }
   }
 
@@ -41,18 +40,11 @@
   }
 
   @include media-min ($md) {
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     &__inner {
       flex-wrap: wrap;
-    }
-
-    &__logo {
-      & img {
-        width: 134px;
-        height: 29px;
-      }
     }
 
     &__burger {
@@ -104,13 +96,9 @@
   }
 
   @include media-min ($xxl) {
-    padding-top: 25px;
-    padding-bottom: 25px;
-
     &__logo {
       & img {
-        width: 160px;
-        height: 35px;
+        max-width: 170px;
       }
     }
 

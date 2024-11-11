@@ -26,8 +26,7 @@
 
     & img {
       display: block;
-      width: 108px;
-      height: 23px;
+      max-width: 110px;
     }
   }
 
@@ -47,13 +46,6 @@
     &__bottom-wrapper {
       flex-grow: 1;
       margin-right: 30px;
-    }
-
-    &__logo {
-      & img {
-        width: 245px;
-        height: 53px;
-      }
     }
   }
 
