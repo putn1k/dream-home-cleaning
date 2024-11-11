@@ -5,6 +5,15 @@
   background-color: var(--theme-bg);
   box-shadow: var(--dark-shadow);
 
+  &--is-open-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    min-width: $mobile-min-width;
+  }
+
   &--fixed {
     position: fixed;
     left: 0;
