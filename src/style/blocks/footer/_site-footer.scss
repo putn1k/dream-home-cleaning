@@ -4,23 +4,6 @@
   color: var(--theme-text-inv);
   background-color: var(--theme-bg-inv);
 
-  &__services {
-    position: relative;
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 1px;
-      background-color: var(--theme-text-inv);
-      opacity: .2;
-    }
-  }
-
   &__logo {
     margin-bottom: 40px;
 
@@ -32,6 +15,32 @@
 
   &__site-nav {
     margin-bottom: 20px;
+  }
+
+  &__bottom {
+    position: relative;
+    padding-top: 40px;
+    margin-top: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      background-color: var(--theme-text-inv);
+      opacity: .2;
+    }
+  }
+
+  &__policy {
+    padding: 28px 0;
+
+    & a {
+      text-decoration-color: transparent;
+      opacity: 0.8;
+    }
   }
 
   @include media-min ($md) {
@@ -47,6 +56,11 @@
       flex-grow: 1;
       margin-right: 30px;
     }
+
+    &__policy {
+      padding: 40px 0;
+      text-align: right;
+    }
   }
 
   @include media-min ($xl) {
@@ -55,23 +69,34 @@
 
     &__bottom {
       display: block;
+      padding-top: 0;
+      margin-top: 0;
+      padding-left: 15px;
+
+      &::after {
+        left: -15px;
+        right: auto;
+        top: -110px;
+        width: 1px;
+        height: calc(100% + 230px);
+      }
     }
 
     &__logo {
       margin-bottom: 80px;
     }
 
-    &__services {
-      padding-bottom: 0;
-      margin-bottom: 0;
+    &__policy {
+      padding: 60px 0;
+      text-align: left;
 
-      &::after {
-        left: auto;
-        bottom: auto;
-        right: 0;
-        top: -110px;
-        width: 1px;
-        height: calc(100% + 230px);
+      & a {
+        transition: opacity .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          text-decoration-color: inherit;
+          opacity: 1;
+        }
       }
     }
   }
