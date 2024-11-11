@@ -2,7 +2,6 @@ import {
   isEscKey,
 } from './utils.js';
 
-const siteHeaderNode = document.querySelector( '.site__header' );
 const headerMainNode = document.querySelector( '.header-main' );
 const headerModalNode = document.querySelector( '.header-modal' );
 
@@ -51,16 +50,16 @@ const initHeaderMenu = () => {
 const observeSiteHeader = ( options ) => {
   const targetTopNode = document.querySelector( '#site-top' );
 
-  if ( !targetTopNode || !headerMainNode || !siteHeaderNode ) return;
+  if ( !targetTopNode || !headerMainNode ) return;
 
   const cb = ( entries ) => {
     entries.forEach( entry => {
       if ( !entry.isIntersecting ) {
         headerMainNode.classList.add( 'header-main--fixed' );
-        siteHeaderNode.style.paddingTop = `${headerMainNode.offsetHeight}px`;
+        document.body.style.paddingTop = `${headerMainNode.offsetHeight}px`;
       } else {
         headerMainNode.classList.remove( 'header-main--fixed' );
-        siteHeaderNode.style.paddingTop = '';
+        document.body.style.paddingTop = '';
       }
     } );
   };
